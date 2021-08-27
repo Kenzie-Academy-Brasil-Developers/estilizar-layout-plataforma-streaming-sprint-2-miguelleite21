@@ -16,23 +16,93 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+	--img-whidth: 130px;
+	--fontSize-header: 20px;
 }
 
 /*BODY*/
 	body{
-
+		background-color: #00002e;
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		color: white;
 	}
 
 /*TOPO*/
-	header.topo{
-		
-	}
-
-/*RODAPÉ*/
 	
 
+/*RODAPÉ*/
+footer{
+	display: flex;
+	justify-content: center;
+}	
+
 /*PÁGINA INICIAL*/
-	div.pg-home{
+.pg-home{
+	width: 100%;
+
+}
+.pg-home__header{
+	font-size: var(--fontSize-header);
+	display: flex;
+	justify-content: center;
+
+}
+
+img{
+	width: var(--img-whidth);
+	height: auto;
+}
+
+figure,h3{
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+}
+figcaption{
+	display: none;
+}
+ul{
+	padding-left: 10px;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+.topo__img{
+	width: 200px;
+}
+button{
+	background-color: #00002e;
+	color: white;
+	padding: 10px 20px;
+	border: 2px solid white;
+}
+
+@media screen and (min-width: 780px) {
+	:root{
+		--fontSize-header: 40px;
+		--img-whidth: 156px;
+	}
+
+	.pg-home{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 		
 	}
+	.pg-home__header{
+		font-size: var(--fontSize-header);
+	}
+	.pg-home__section{
+		width: 858px;	
+	}
+
+	.topo{
+		display: flex;
+		justify-content: start;
+	}
+}
+	
